@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute"
+  width="200" height="200" creationComplete="initApp()">	
+  <mx:Script>
+  	<![CDATA[
+  		import MyApp.MyAppFacade;
+  		public function initApp():void{
+  			var facade:MyAppFacade = MyAppFacade.getInstance();
+  			facade.startup( this );
+  		}
+  	]]>
+  </mx:Script>
+ <mx:Canvas id="mainContainer" width="100%" height="100%">
+  <mx:Label id="nameLabel" x="87.5" y="0"/>
+  <mx:Image id="image" x="30" y="20" width="140" height="140"/>
+  <mx:Button x="10" y="168" label="上一张" id="btnPrev"/>
+  <mx:Button x="125" y="168" label="下一张" id="btnNext"/>
+ 
+ </mx:Canvas>
+</mx:Application>
